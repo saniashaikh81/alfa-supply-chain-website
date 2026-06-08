@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+body{
+ font-family:'Poppins',sans-serif;
+}
+html,
+body,
+#root{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+
+.hero{
+  width:100vw;
+  height:100vh;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.65)
+  ),
+  url('/bg.jpg');
+
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+
+  /* Background fixed rahega */
+  background-attachment:fixed;
+
+  overflow:hidden;
+}
+
+.overlay{
+  width:100%;
+  height:100%;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  color:white;
+  text-align:center;
+
+  padding:20px;
+}
+
+.main-logo{
+ width:140px;
+ margin-bottom:3px;
+}
+
+.coming-soon{
+  font-size:8rem;
+  font-family:'Great Vibes', cursive;
+  color:white;
+
+  margin-top:70px;
+  margin-bottom:50px;
+
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.5),
+    0 0 30px rgba(255,140,0,0.8),
+    0 0 60px rgba(255,140,0,0.7),
+    0 0 100px rgba(255,140,0,0.6);
+
+  animation: glowText 3s ease-in-out infinite;
+}
+
+.coming-soon::before{
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  width:120%;
+  height:120%;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(255,140,0,0.45) 0%,
+    rgba(255,140,0,0.18) 40%,
+    rgba(255,140,0,0) 75%
+  );
+
+  filter:blur(40px);
+
+  z-index:-1;
+
+  pointer-events:none;
+  animation:glowPulse 4s ease-in-out infinite;
+}
+
+.subtitle{
+ margin-top:80px;      
+ margin-bottom:15px;   
+ letter-spacing:3px;
+ text-transform:uppercase;
+ font-size:1.2rem;
+ font-weight:500;
+}
+
+.companies{
+  display:flex;
+  justify-content:center;
+  align-items:stretch;
+
+  gap:25px;
+
+  margin-top:15px;
+}
+.company-card{
+  position:relative;
+
+  width:420px;
+  height:240px;
+
+  padding:22px;
+
+  border-radius:20px;
+
+  background:rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(15px);
+  -webkit-backdrop-filter:blur(15px);
+
+  border:1px solid rgba(255,255,255,0.15);
+
+  display:flex;
+  flex-direction:column;
+
+  overflow:hidden;
+
+  cursor:pointer;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+.company-card:hover{
+
+  transform:
+    translateY(-8px);
+
+  background:
+    rgba(255,255,255,0.12);
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.35),
+    0 0 30px rgba(255,140,0,0.18);
+}
+
+.company-card:hover::before{
+  left:150%;
+}
+
+.company-logo{
+ width:80px;
+ margin-bottom:15px;
+}
+
+.company-card h3{
+ margin-bottom:10px;
+}
+
+.company-card a{
+ color:white;
+ text-decoration:none;
+}
+
+.company-card p{
+ margin-top:10px;
+}
+
+.card-top{
+  display:flex;
+  align-items:center;
+
+  gap:15px;
+
+  height:70px;
+}
+
+.company-details{
+  text-align:left;
+
+  min-height:60px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.company-details h3{
+  margin-bottom:6px;
+  font-size:1.15rem;
+  line-height:1.3;
+}
+
+.company-details a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  margin-bottom:5px;
+  font-size:.95rem;
+
+    word-break:break-word;
+}
+
+.company-details p{
+  margin:0;
+  font-size:.9rem;
+}
+
+.company-logo{
+  width:80px;
+  height:60px;
+
+  object-fit:contain;
+
+  justify-self:center;
+}
+
+.socials{
+ display:flex;
+ gap:25px;
+ margin-top:50px;
+}
+
+.socials a{
+ color:white;
+ font-size:2rem;
+ transition:.3s;
+}
+
+.socials a:hover{
+ transform:scale(1.2);
+}
+
+.card-socials{
+  margin-top:auto;
+
+  display:flex;
+  justify-content:center;
+
+  gap:18px;
+
+  padding-top:15px;
+
+  border-top:
+  1px solid rgba(255,255,255,.15);
+}
+
+.card-socials a{
+  color:white;
+  font-size:1.3rem;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.card-socials a:hover{
+  transform:
+    translateY(-4px)
+    scale(1.15);
+}
+
+
+.website-link{
+  display:inline-block;
+  color:#ffffff;
+  text-decoration:none;
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.website-link:hover{
+  color:#ffb347;
+  text-decoration:underline;
+}
+
+.company-title{
+  font-size:1.15rem;
+  font-weight:600;
+
+  line-height:1.3;
+
+  text-align:left;
+
+  flex:1;
+}
+
+
+/* YouTube */
+.card-socials a:hover .youtube-icon{
+  color:#FF0000;
+}
+
+/* Facebook */
+.card-socials a:hover .facebook-icon{
+  color:#1877F2;
+}
+
+/* Instagram */
+.card-socials a:hover .instagram-icon{
+  color:#E4405F;
+}
+
+/* WhatsApp */
+.card-socials a:hover .whatsapp-icon{
+  color:#25D366;
+}
+
+/* LinkedIn */
+.card-socials a:hover .linkedin-icon{
+  color:#0A66C2;
+}
