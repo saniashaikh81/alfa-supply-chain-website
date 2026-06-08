@@ -333,3 +333,70 @@ body,
 .card-socials a:hover .linkedin-icon{
   color:#0A66C2;
 }
+
+
+
+/* ================= MOBILE ONLY SCROLL FIX ================= */
+@media screen and (max-width: 768px) {
+
+  html,
+  body,
+  #root {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+  }
+
+  .hero {
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .companies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* center cards */
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .company-card {
+    width: 90%;
+    max-width: 350px;      /* same size for all cards */
+  }
+}
+
+@media screen and (min-width: 769px) {
+
+  html,
+  body,
+  #root {
+    overflow: hidden;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.9;
+    font-size: 7rem;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .coming-soon {
+    margin-bottom: 10px !important;
+  }
+
+  .subtitle {
+    margin-top: 9px !important;
+  }
+
+}
